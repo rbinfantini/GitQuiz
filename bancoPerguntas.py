@@ -1,3 +1,4 @@
+# bancoPerguntas.py
 # Banco de perguntas do GitQuiz
 # Modos disponíveis: padrao, presidencia
 
@@ -69,6 +70,68 @@ perguntas_padrao = [
         "resposta": "B",
         "explicacao": "Conflitos ocorrem quando o Git não consegue mesclar automaticamente."
     },
+
+    # Verdadeiro ou Falso
+    {
+        "tipo": "verdadeiro_falso",
+        "pergunta": "'git add .' adiciona todos os arquivos modificados e novos da pasta atual para a staging area.",
+        "resposta": "V",
+        "explicacao": "Correto. O ponto representa o diretório atual recursivamente."
+    },
+    {
+        "tipo": "verdadeiro_falso",
+        "pergunta": "É possível ter mais de uma branch apontando para o mesmo commit.",
+        "resposta": "V",
+        "explicacao": "Branches são apenas ponteiros; vários podem apontar para o mesmo commit."
+    },
+    {
+        "tipo": "verdadeiro_falso",
+        "pergunta": "'git pull' é exatamente a mesma coisa que 'git fetch'.",
+        "resposta": "F",
+        "explicacao": "git pull = git fetch + git merge. O fetch só baixa, não integra."
+    },
+    {
+        "tipo": "verdadeiro_falso",
+        "pergunta": "O arquivo .gitignore deve ser commitado no repositório para funcionar corretamente.",
+        "resposta": "V",
+        "explicacao": "Sem commitar, o .gitignore só funciona localmente e não é compartilhado."
+    },
+    {
+        "tipo": "verdadeiro_falso",
+        "pergunta": "Deletar uma branch local também deleta a branch no repositório remoto.",
+        "resposta": "F",
+        "explicacao": "São independentes. Para deletar no remoto: git push origin --delete <branch>."
+    },
+
+    # ── Completar o Comando ──────────────────────────────────────────────────
+    {
+        "tipo": "completar_comando",
+        "pergunta": "Complete o comando para criar e já entrar em uma nova branch:\ngit ________ feature/nova-funcao",
+        "alternativas": ["A) branch", "B) checkout -b", "C) switch --new", "D) create"],
+        "resposta": "B",
+        "explicacao": "'git checkout -b' cria e já faz o checkout da nova branch."
+    },
+    {
+        "tipo": "completar_comando",
+        "pergunta": "Complete o comando para ver o histórico de commits de forma resumida:\ngit log ________",
+        "alternativas": ["A) --short", "B) --summary", "C) --oneline", "D) --brief"],
+        "resposta": "C",
+        "explicacao": "'git log --oneline' exibe cada commit em uma única linha."
+    },
+    {
+        "tipo": "completar_comando",
+        "pergunta": "Complete o comando para desfazer as alterações de um arquivo antes do stage:\ngit ________ arquivo.txt",
+        "alternativas": ["A) undo", "B) restore", "C) reset", "D) revert"],
+        "resposta": "B",
+        "explicacao": "'git restore arquivo.txt' descarta as mudanças na working tree."
+    },
+    {
+        "tipo": "completar_comando",
+        "pergunta": "Complete o comando para conectar seu repositório local a um remoto:\ngit remote ________ origin https://github.com/user/repo.git",
+        "alternativas": ["A) link", "B) set", "C) add", "D) connect"],
+        "resposta": "C",
+        "explicacao": "'git remote add' registra um novo repositório remoto com um apelido."
+    },
 ]
 
 # MODO PRESIDÊNCIA
@@ -76,6 +139,7 @@ perguntas_padrao = [
 perguntas_presidencia = []
 
 # Banco central e funções de acesso
+
 BANCO_DE_PERGUNTAS = {
     "padrao": perguntas_padrao,
     "presidencia": perguntas_presidencia,
