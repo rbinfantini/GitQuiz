@@ -231,11 +231,45 @@ perguntas_presidencia = [
     },
 ]
 
-# Banco central e funções de acesso
 
+# Banco central e funções de acesso
 BANCO_DE_PERGUNTAS = {
     "padrao": perguntas_padrao,
     "presidencia": perguntas_presidencia,
 }
 
 MODOS_DISPONIVEIS = list(BANCO_DE_PERGUNTAS.keys())
+
+
+def get_perguntas(modo: str) -> list:
+    """
+    Retorna a lista de perguntas de um modo.
+    Parâmetros:
+        modo (str): 'padrao' ou 'presidencia'
+    Retorna:
+        list: lista de dicts com as perguntas, ou lista vazia se modo inválido.
+    """
+    return BANCO_DE_PERGUNTAS.get(modo.lower(), [])
+
+
+def listar_modos() -> list:
+    """Retorna os modos disponíveis no banco de perguntas."""
+    return MODOS_DISPONIVEIS
+
+
+def modo_existe(modo: str) -> bool:
+    """Verifica se um modo existe no banco."""
+    return modo.lower() in BANCO_DE_PERGUNTAS
+
+
+def get_perguntas_por_tipo(modo: str, tipo: str) -> list:
+    """
+    Filtra perguntas de um modo por tipo.
+    Parâmetros:
+        modo (str): 'padrao' ou 'presidencia'
+        tipo (str): 'multipla_escolha', 'verdadeiro_falso' ou 'completar_comando'
+    Retorna:
+        list: perguntas filtradas.
+    """
+    perguntas = get_perguntas(modo)
+    return [p for p in perguntas if p.get("tipo") == tipo.lower()]
