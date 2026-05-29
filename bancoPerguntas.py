@@ -1,6 +1,20 @@
-# perguntas.py
 # Banco de perguntas do GitQuiz
-# Categoria disponíveis: Padrão, Modo Presidência PucTech
+# Modos disponíveis: padrao, presidencia
 
-CATEGORIAS_DISPONIVEIS = []
-BANCO_DE_PERGUNTAS = {}
+#  MODO PADRÃO — Git & GitHub para todos
+# Formato: multipla_escolha | verdadeiro_falso | completar_comando
+
+perguntas_padrao = []
+
+#MODO PRESIDÊNCIA
+
+perguntas_presidencia = []
+
+#Banco central e funções de acesso
+
+BANCO_DE_PERGUNTAS = {
+    "padrao": perguntas_padrao,
+    "presidencia": perguntas_presidencia,
+}
+
+MODOS_DISPONIVEIS = list(BANCO_DE_PERGUNTAS.keys())
