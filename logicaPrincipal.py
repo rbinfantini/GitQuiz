@@ -43,6 +43,11 @@ def calcular_pontuacao(acertos, total):
     return int((acertos / total) * 100)
 
 '''
+Função para executar o quiz, apresentando as perguntas ao usuário e coletando suas respostas.
+Parâmetros:
+    modo (str): O modo do quiz, que determina o conjunto de perguntas a ser utilizado.
+Retorna:
+    dict: Um dicionário contendo os resultados do quiz, incluindo o modo, número de acertos, erros, total de perguntas e pontuação.
 '''
 def executar_quiz(modo):
     perguntas = get_perguntas(modo)
