@@ -1,3 +1,4 @@
+import os
 import colorama
 from colorama import Fore, Style
 
@@ -20,3 +21,6 @@ def mostrar_game_over(resultado):
     print(Fore.CYAN + f"   Você acertou {resultado['acertos']} de {resultado['total']} perguntas.")
     print(Fore.GREEN + f"   Pontuação Final: {resultado['pontuacao']}%")
     print(Fore.MAGENTA + Style.BRIGHT + "=" * 50 + "\n")
+
+def limpar_tela():
+    os.system('cls' if os.name == 'nt' else 'clear')
