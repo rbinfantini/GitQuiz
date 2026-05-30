@@ -35,7 +35,7 @@ git clone <url-do-repositorio>
 cd GitQuiz
 ```
 
-3. Instale as dependências (caso existam):
+3. Instale as dependências:
 
 ```bash
 pip install -r requirements.txt
