@@ -53,6 +53,25 @@ def executar_quiz(modo):
         "pontuacao": pontuacao
     }
 
+
 if __name__ == "__main__":
-    resultado_final = executar_quiz("padrao")
+    # Pequeno menu para escolher o modo antes de iniciar o quiz
+    interface.limpar_tela()
+    print("=" * 50)
+    print("           ESCOLHA O MODO DE JOGO           ")
+    print("=" * 50)
+    print("1 - Padrão (Comandos básicos do dia a dia)")
+    print("2 - Presidência (Avançado e pegadinhas)")
+
+    opcao = input("\nDigite 1 ou 2: ")
+
+    # Define o modo baseado na resposta (se digitar qualquer coisa diferente de 2, cai no padrão)
+    if opcao == "2":
+        modo_selecionado = "presidencia"
+    else:
+        modo_selecionado = "padrao"
+
+    # Agora sim, roda o quiz com o modo escolhido
+    resultado_final = executar_quiz(modo_selecionado)
+
     interface.mostrar_game_over(resultado_final)
