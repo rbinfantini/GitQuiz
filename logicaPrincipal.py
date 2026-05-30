@@ -28,8 +28,11 @@ def executar_quiz(modo):
 
     for pergunta in perguntas:
         print(f"\n{pergunta['pergunta']}")
-        for alternativa in pergunta["alternativas"]:
-            print(alternativa)
+
+        # Se a pergunta tiver alternativas, exibe elas
+        if "alternativas" in pergunta:
+            for alternativa in pergunta["alternativas"]:
+                print(alternativa)
 
         resposta = input("\nSua resposta: ")
 
