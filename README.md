@@ -1,71 +1,70 @@
 # GitQuiz
 
-Projeto desenvolvido em Python com o objetivo de praticar conceitos de Git e GitHub através do desenvolvimento de uma aplicação de perguntas e respostas executada no terminal.
+Project developed in Python with the goal of practicing Git and GitHub concepts through the development of a question-and-answer application that runs in the terminal.
 
-## Funcionalidades
+## Features
 
-* Exibição de perguntas de múltipla escolha
-* Verificação de respostas
-* Controle de pontuação
-* Interface em terminal
-* Organização modular do código
+* Display of multiple-choice questions
+* Answer checking
+* Score tracking
+* Terminal interface
+* Modular code organization
 
-## Estrutura do Projeto
+## Project Structure
 
-* `logicaPrincipal.py` — arquivo principal responsável pela execução do programa.
-* `interface.py` — funções relacionadas à interface e interação com o usuário.
-* `bancoPerguntas.py` — armazenamento e gerenciamento das perguntas do quiz.
-* `requirements.txt` — dependências do projeto.
+* `logicaPrincipal.py` — main file responsible for running the program.
+* `interface.py` — functions related to the interface and user interaction.
+* `bancoPerguntas.py` — storage and management of the quiz questions.
+* `requirements.txt` — project dependencies.
 
-## Pré-requisitos
+## Prerequisites
 
-* Python 3 instalado na máquina
+* Python 3 installed on your machine
 
-## Como Executar
+## How to Run
 
-1. Clone o repositório:
+1. Clone the repository:
 
-```bash
-git clone <url-do-repositorio>
+```
+git clone <repository-url>
 ```
 
-2. Acesse a pasta do projeto:
+2. Enter the project folder:
 
-```bash
+```
 cd GitQuiz
 ```
 
-3. Instale as dependências:
+3. Install the dependencies:
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
-4. Execute o programa:
+4. Run the program:
 
-```bash
+```
 python3 logicaPrincipal.py
 ```
 
-## Como Utilizar
+## How to Use
 
-Ao iniciar o programa, as perguntas serão apresentadas no terminal.
+When the program starts, the questions will be displayed in the terminal.
+Type your chosen option when prompted and follow your score throughout the quiz.
 
-Digite a alternativa desejada quando solicitado e acompanhe sua pontuação ao longo do quiz.
-
-## Tecnologias Utilizadas
+## Technologies Used
 
 * Python 3
 * Git
 * GitHub
 
-## Objetivo
+## Objective
 
-Este projeto foi desenvolvido para praticar:
+This project was developed to practice:
 
-* Controle de versão com Git
-* Uso de branches
-* Merge e resolução de conflitos
+* Version control with Git
+* Working with branches
+* Merging and resolving conflicts
 * Conventional Commits
-* Organização de projetos Python
-* Colaboração em equipe utilizando GitHub
+* Organizing Python projects
+* Team collaboration using GitHub
